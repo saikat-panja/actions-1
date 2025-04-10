@@ -3,17 +3,47 @@ name: generate ASCII artwork
 on: push
 
 jobs: 
-  ascii_job:
+  # ascii_job:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: checkout repo 
+  #     uses: actions/checkout@v4
+
+  #   - name: list repo files
+  #     run: ls -ltra
+    
+  #   - name: executing shell script
+  #     run: |
+  #       chmod +x ascii-script.sh
+  #       ./ascii-script.sh
+
+############ workflow with multiple jobs ############
+  build_job_1:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout repo 
-      uses: actions/checkout@v4
+    - name: install cowsay program
+      run: sudo apt-get install cowsay -y
 
-    - name: list repo files
-      run: ls -ltra
+    - name: execute cowsay cmd
+      run: cowsay -f dragon "run for cover, i am a DRAGON ... RAWR" >> dragon.txt
+
+    - name: sleep for 30 seconds
+      run: sleep 30
+
+  test_job_2:
+    runs-on: ubuntu-latest
+    steps:
+    - name: sleep for 10 seconds
+      run: sleep 10
+
+    - name: test file exists
+      run: grep -i "dragon" dragon.txt
+
+  deploy_job_3:
+    runs-on: ubuntu-latest
+    steps:
+    - name: read file
+      run: cat dragon.txt
     
-    - name: executing shell script
-      run: |
-        chmod +x ascii-script.sh
-        ./ascii-script.sh
-
+    - name: deploy
+      run: echo Deploying...
