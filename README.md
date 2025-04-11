@@ -75,4 +75,4 @@ https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow
     - `concurrency` key ensures that only one workflow runs or a job is in progress. we can use the key at the workflow level and at the job level 
     - `cancel-in-progress` 
         - if `true` cancels any current running job or workflow within the same concurrency group  
-        - if `false` it cancels the second workflow
+        - if `false` new one waits till the currently running job completes
