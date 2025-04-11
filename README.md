@@ -76,3 +76,9 @@ https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow
     - `cancel-in-progress` 
         - if `true` cancels any current running job or workflow within the same concurrency group  
         - if `false` new one waits till the currently running job completes
+
+### timeout for jobs and steps
+- github by default kills the workflow after 6hrs
+- timeout option can be mentioned at
+    - step level
+    - job level
