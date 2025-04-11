@@ -86,3 +86,10 @@ https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow
 ## using matrix strategy
 - if you want to test applications on different os, or multiple different programming versions, we can have multiple jobs for each os and for each programming language
     - to avoid repeating, use [matrix strategy](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow#using-a-matrix-strategy)
+    - if any job from the matrix fails, any job which is in progress will also be automatically cancelled, and the workflow status would be `Failure` 
+        - `fail-fast` is by default `true`
+    
+### additional matrix strategy
+- using `include` add more values which are not mentioned in matrix
+- using `exclude` ignore certain matrix values 
+- `max-parallel` value can be set to control the number of jobs that can run simultaneously
