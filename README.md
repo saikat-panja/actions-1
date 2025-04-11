@@ -84,3 +84,5 @@ https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow
     - job level
 
 ## using matrix strategy
+- if you want to test applications on different os, or multiple different programming versions, we can have multiple jobs for each os and for each programming language
+    - to avoid repeating, use [matrix strategy](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow#using-a-matrix-strategy)

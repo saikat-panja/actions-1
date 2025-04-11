@@ -1,3 +1,27 @@
+# name: matrix configuration
+
+# on:
+#   push:
+#   workflow_dispatch: 
+
+# jobs:
+#   deploy_on_ubuntu:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: echo docker details
+#       run: docker info
+    
+#     - name: run images
+#       run: docker run hello-world
+#   deploy_on_windows:
+#     runs-on: windows-latest
+#     steps:
+#     - name: echo docker details
+#       run: docker info
+    
+#     - name: run images
+#       run: docker run hello-world
+############ using matrix strategy ############
 name: matrix configuration
 
 on:
@@ -5,19 +29,17 @@ on:
   workflow_dispatch: 
 
 jobs:
-  deploy_on_ubuntu:
-    runs-on: ubuntu-latest
+  deploy:
+    strategy:
+      matrix:
+        # can be of any name. here taking os and images
+        # it would create 3x2 = 6 jobs all running in parallel
+        os: [ubuntu-latest, ubuntu-20.04, windows-latest]
+        images: [hello-world, alpine]
+    runs-on: ${{ matrix.os }}
     steps:
     - name: echo docker details
       run: docker info
     
-    - name: run images
-      run: docker run hello-world
-  deploy_on_windows:
-    runs-on: windows-latest
-    steps:
-    - name: echo docker details
-      run: docker info
-    
-    - name: run images
-      run: docker run hello-world
+    - name: run image on ${{ matrix.os }}
+      run: docker run ${{ matrix.images }}
