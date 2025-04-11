@@ -70,3 +70,6 @@ https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow
 - `workflow_dispatch` # adds a button to manually trigger a workflow
 
 ## using job concurrenty
+- when a long running deploy job is in progress, you don't want another deploy job to run at the same time
+- https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/control-the-concurrency-of-workflows-and-jobs
+    - `concurrency` key ensures that only one workflow runs or a job is in progress. we can use the key at the workflow level and at the job level 
