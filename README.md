@@ -66,3 +66,7 @@ we will be learning github actions
 ## triggering a workflow
 
 https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows
+
+- `workflow_dispatch` # adds a button to manually trigger a workflow
+
+## using job concurrenty
