@@ -113,6 +113,9 @@ https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow
     - inputs
     - strategy
 
+<<<<<<< HEAD
+
+=======
 ## github action expressions
 - use expressions to programmatically execute JOBs and STEPs based on conditions
 - [expressions](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/evaluate-expressions-in-workflows-and-actions)
@@ -141,3 +144,8 @@ https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow
     if: github.ref == 'refs/heads/main'
 
 ```
+## workflow event filters and activty types
+
+- [pull_request](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#pull_request)
+- [push](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#push)
+>>>>>>> c068db2c950b557ae5480ebdaf5426b8b7b14be7
