@@ -143,6 +143,8 @@ https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow
 
 ```
 ## workflow event filters and activty types
-
+- [event that trigger workflows](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows)
 - [pull_request](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#pull_request)
 - [push](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#push)
+
+- 
