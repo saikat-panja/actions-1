@@ -133,3 +133,11 @@ https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow
         steps:
       ```
 ### using if expression in jobs
+
+
+```yaml
+  docker_deploy:
+    # deploy job should only be running when it is in the main branch
+    if: github.ref == 'refs/heads/main'
+
+```
