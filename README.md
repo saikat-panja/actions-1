@@ -98,3 +98,46 @@ https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow
 ## access workflow context information
 
 - [contexts](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#about-contexts)
+- contexts are a set of predefined objects or variables which contain relevant information about the environment event or other data associated with a workflow run
+- commonly used contexts
+    - github
+    - env
+    - vars
+    - job
+    - jobs
+    - steps
+    - runner
+    - secrets
+    - matrix
+    - needs
+    - inputs
+    - strategy
+
+## github action expressions
+- use expressions to programmatically execute JOBs and STEPs based on conditions
+- [expressions](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/evaluate-expressions-in-workflows-and-actions)
+
+- `if`
+    - expression can be any combination of literal values, reference to a context, or function
+
+    - ```yaml
+      steps:
+      - name: testing
+        if: <expression> || <expression>
+        run: ./script.sh
+      ```
+    - ```yaml
+      jobs:
+        deploy:
+          if: github.ref == 'refs/heads/main'
+        steps:
+      ```
+### using if expression in jobs
+
+
+```yaml
+  docker_deploy:
+    # deploy job should only be running when it is in the main branch
+    if: github.ref == 'refs/heads/main'
+
+```
