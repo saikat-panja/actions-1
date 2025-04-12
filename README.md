@@ -93,3 +93,8 @@ https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow
 - using `include` add more values which are not mentioned in matrix
 - using `exclude` ignore certain matrix values 
 - `max-parallel` value can be set to control the number of jobs that can run simultaneously
+
+
+## access workflow context information
+
+- [contexts](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#about-contexts)
