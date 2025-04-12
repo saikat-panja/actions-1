@@ -152,3 +152,4 @@ https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow
 
 - [skipping workflow runs](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/skipping-workflow-runs)
 
+- skip workflows by including a command in your commit message
