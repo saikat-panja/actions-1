@@ -147,4 +147,8 @@ https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow
 - [pull_request](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#pull_request)
 - [push](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#push)
 
-- 
+
+## cancelling and skipping workflows
+
+- [skipping workflow runs](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/skipping-workflow-runs)
+
