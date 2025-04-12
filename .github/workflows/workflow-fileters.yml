@@ -12,6 +12,7 @@ on:
     - main
     - '!feature/*'  # ignoring pushes to any branch name starting with feature using !
   pull_request: 
+    # all mentioned filters should satisfy
     types: 
     - opened
     - closed
